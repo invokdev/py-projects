@@ -11,7 +11,7 @@ def print_redo():
     print("Please choose either a or b. \n")    
 
 def get_preference():
-    res = input("Are converting to Fahrenheit or to Celsius? \n[a] Fahrenheit \n[b] Celsius \n> ")
+    res = input("Are you converting from Fahrenheit or from Celsius? \n[a] Fahrenheit \n[b] Celsius \n> ")
     
     if res == 'a':
         return fahren_conv()
@@ -22,12 +22,12 @@ def get_preference():
         get_preference()    
         
 def fahren_conv():
-    fahrenheit = int(input('Enter a tempature in Fahrenheit: '))
+    fahrenheit = float(input('Enter a tempature in Fahrenheit: '))
     celsius = (fahrenheit - 32) * 5/9
     print(celsius,"°C \n") 
     
 def cels_conv():
-    celsius = int(input('Enter a tempature in Celsius: '))
+    celsius = float(input('Enter a tempature in Celsius: '))
     fahrenheit = 9/5 * celsius + 32
     print(fahrenheit,"°F \n")
     
